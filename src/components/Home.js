@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card, CardContent, CardActions, Divider } from '@material-ui/core'
+import { Link } from 'react-router-dom'
 import cars from '../cars.json'
 
 const Home = () => {
@@ -19,8 +20,7 @@ const Home = () => {
                     </CardContent>
                     <Divider />
                     <CardActions style={{ color: 'mediumblue' }}>
-                        {/* Change a tag to Link */}
-                        <a>See more Details</a>
+                    <Link to={`/car/${car.id}`}>See more Details</Link>
                     </CardActions>
                 </Card>
             ))}
